@@ -1,0 +1,42 @@
+ $(document).ready(function () {
+
+  var counterText = "Count clicks: "
+  
+  $("body").on("click", ".container li", function () {
+    switchTextDecoration(this)
+
+    var counter = findCounter(this)
+    var count = counter
+      .text()
+      .substring(counterText.length);
+    var incrementedCounter = Number.parseInt(count) + 1
+    counter.html(counterText + incrementedCounter)
+  })
+
+  $("body").on("click", ".reset", function () {
+    var counter = findCounter(this)
+    counter.html(counterText + 0)
+    $(this)
+      .closest(".container")
+      .find("li")
+      .css({ "text-decoration": "" })
+  })
+
+})
+
+function findCounter(element) {
+  return $(element)
+    .closest(".container")
+    .children(".counter")
+    .first()
+}
+
+function switchTextDecoration(element) {
+  if ($(element).data("done")) {
+    $(element).data("done", false)
+    $(element).css({ "text-decoration": "" })
+  } else {
+    $(element).data("done", true)
+    $(element).css({ "text-decoration": "line-through" })
+  }
+}
