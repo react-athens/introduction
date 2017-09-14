@@ -312,8 +312,8 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="primary">Usefull links</Heading>
           <List >
             <ListItem ><Markdown textColor="primary">{`http://react-athens.surge.sh`}</Markdown></ListItem>
-            <ListItem ><Markdown textColor="primary">This [presentation](https://github.com/axsignalocean/react-intro)  in React</Markdown></ListItem>
-            <ListItem><Markdown>[Source code](https://webpack.github.io/) of the Demo</Markdown></ListItem>
+            <ListItem ><Markdown textColor="primary">This [presentation](https://github.com/react-athens/introduction)  in React</Markdown></ListItem>
+            <ListItem><Markdown>[Source code](https://github.com/react-athens/introduction-demo) of the Demo</Markdown></ListItem>
             <ListItem><Markdown>[Migrate from deprecations](https://github.com/reactjs/react-codemod)</Markdown></ListItem>
             <ListItem><Markdown>[create-react-app](https://github.com/facebookincubator/create-react-app)</Markdown></ListItem>
             <ListItem><Markdown>[Webpack](https://webpack.github.io/)</Markdown></ListItem>
