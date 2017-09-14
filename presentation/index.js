@@ -36,6 +36,7 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   react: require("../assets/react.png"),
   reactNative: require("../assets/react-native.png"),
+  component: require("../assets/components.png"),
 };
 
 preloader(images);
@@ -301,6 +302,10 @@ export default class Presentation extends React.Component {
           <Heading size={10} lineHeight={1} textColor="primary" >
             by Andreas Dimakis
           </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Image src={images.component} width="100%" />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary" className="inline">
